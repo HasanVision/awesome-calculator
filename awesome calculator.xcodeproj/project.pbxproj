@@ -14,6 +14,8 @@
 		546E72B62BA897DC0001405B /* awesome_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E72B52BA897DC0001405B /* awesome_calculatorTests.swift */; };
 		546E72C02BA897DC0001405B /* awesome_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E72BF2BA897DC0001405B /* awesome_calculatorUITests.swift */; };
 		546E72C22BA897DC0001405B /* awesome_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E72C12BA897DC0001405B /* awesome_calculatorUITestsLaunchTests.swift */; };
+		546E72CF2BA8A90C0001405B /* TotalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E72CE2BA8A90C0001405B /* TotalText.swift */; };
+		546E72D12BA8ADC00001405B /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E72D02BA8ADC00001405B /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		546E72BB2BA897DC0001405B /* awesome calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "awesome calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		546E72BF2BA897DC0001405B /* awesome_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awesome_calculatorUITests.swift; sourceTree = "<group>"; };
 		546E72C12BA897DC0001405B /* awesome_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = awesome_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		546E72CE2BA8A90C0001405B /* TotalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalText.swift; sourceTree = "<group>"; };
+		546E72D02BA8ADC00001405B /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				546E72A42BA897DA0001405B /* awesome_calculatorApp.swift */,
 				546E72A62BA897DA0001405B /* ContentView.swift */,
+				546E72CE2BA8A90C0001405B /* TotalText.swift */,
+				546E72D02BA8ADC00001405B /* CalculatorButton.swift */,
 				546E72A82BA897DC0001405B /* Assets.xcassets */,
 				546E72AA2BA897DC0001405B /* Preview Content */,
 			);
@@ -259,6 +265,8 @@
 			files = (
 				546E72A72BA897DA0001405B /* ContentView.swift in Sources */,
 				546E72A52BA897DA0001405B /* awesome_calculatorApp.swift in Sources */,
+				546E72CF2BA8A90C0001405B /* TotalText.swift in Sources */,
+				546E72D12BA8ADC00001405B /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
