@@ -14,6 +14,7 @@ struct TotalText: View {
             .foregroundColor(.green)
             .multilineTextAlignment(.center)
             .font(.system(size:60))
+            .lineLimit(1)
     }
 }
 
