@@ -11,7 +11,7 @@ struct TotalText: View {
     var value: String = "0"
     var body: some View {
         Text(value)
-            .foregroundColor(.green)
+            .foregroundColor(.blue)
             .multilineTextAlignment(.center)
             .font(.system(size:60))
             .lineLimit(1)

@@ -12,6 +12,7 @@ enum ClaculatorMode  {
     case addition
     case subtraction
     case muliplication 
+    case division
 }
 
 
@@ -52,9 +53,12 @@ struct ContentView: View {
                     HStack {
                         CalculatorButton(action: didPressNumber, width: 148,buttonText: "0")
                         CalculatorButton(action: didPressClear,buttonColor: .gray,buttonText: "C")
-                        CalculatorButton(action: didPressEquals, buttonColor: .orange,buttonText: "=")
+                        CalculatorButton(action: didPressEquals, buttonColor: .green,buttonText: "=")
                       
                         
+                    }
+                    HStack{
+                        CalculatorButton(action: didPressMode, mode: .division, buttonText: "/")
                     }
                 }
             }
@@ -96,32 +100,46 @@ struct ContentView: View {
          currentMode = .notSet
          lastButtonWasMode = false
     }
-    func didPressEquals (button: CalculatorButton) {
-//        currentValue = button.buttonText
+    func didPressEquals(button: CalculatorButton) {
         if currentMode == .notSet || lastButtonWasMode {
             return
         }
-        if currentMode == .addition {
-            savedNum = savedNum + currentValueInt
-        } else if currentMode == .subtraction {
-            savedNum = savedNum - currentValueInt
-        } else if currentMode == .muliplication{
-            savedNum = savedNum * currentValueInt
+        switch currentMode {
+        case .addition:
+            savedNum += currentValueInt
+        case .subtraction:
+            savedNum -= currentValueInt
+        case .muliplication:
+            savedNum *= currentValueInt
+        case .division:
+            if currentValueInt != 0 {
+                savedNum /= currentValueInt
+            } else {
+                currentValue = "Error"
+                currentValueInt = 0
+                return
+            }
+        case .notSet:
+            updateText()
         }
         
         currentValueInt = savedNum
         updateText()
         lastButtonWasMode = true
     }
+
     func updateText () {
+        
+        
         if currentMode == .notSet {
             savedNum = currentValueInt
         }
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        let num = NSNumber(value: currentValueInt)
+//        numberFormatter.maximumFractionDigits = 6
         
+        let num = NSNumber(value: currentValueInt)
         currentValue = numberFormatter.string(from: num) ?? "Error"
     }
 }

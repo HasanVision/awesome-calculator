@@ -11,7 +11,7 @@ struct CalculatorButton: View {
     var action: (CalculatorButton) -> Void = {_ in }
     var mode : ClaculatorMode = ClaculatorMode.notSet
     var width: CGFloat = 70
-    var buttonColor: Color  = Color(.green)
+    var buttonColor: Color  = Color(.blue)
     var buttonText: String = "1"
     var body: some View {
         Button {
